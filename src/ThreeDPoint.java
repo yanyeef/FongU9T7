@@ -5,6 +5,14 @@ public class ThreeDPoint extends  Point{
         this.z = z;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof ThreeDPoint)) {
+            return false;
+        }
+        Point otherPoint = (ThreeDPoint) o;
+        return super.equals(o) && this.z == otherPoint.z;
+    }
 
     }
 }

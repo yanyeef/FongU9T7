@@ -6,13 +6,18 @@ public class ThreeDPoint extends  Point{
     }
 
     @Override
+    public String toString(){
+        return super.toString() + ", z = " + z;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if(!(o instanceof ThreeDPoint)) {
             return false;
         }
-        Point otherPoint = (ThreeDPoint) o;
+        ThreeDPoint otherPoint = (ThreeDPoint) o;
         return super.equals(o) && this.z == otherPoint.z;
     }
 
-    }
+
 }
